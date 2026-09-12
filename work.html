@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — Maharnav Bhuyan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="netbg"></canvas>
+<div class="glow-orb one"></div>
+<div class="glow-orb two"></div>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-name"><span class="prompt">&gt;</span> maharnav.bhuyan</div>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="work.html">work</a>
+      <a href="experience.html">experience</a>
+      <a href="skills.html">skills</a>
+      <a href="contact.html">contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap page-head">
+  <div class="page-eyebrow"><span class="dot"></span>projects</div>
+  <h1>Systems with <span class="accent">AI wired into the backend</span>.</h1>
+  <p>Two full-stack builds where the interesting part isn't the model — it's the API layer and architecture that gets it into a real product.</p>
+</div>
+
+<section style="border-top:none; padding-top:0;">
+  <div class="wrap">
+    <div class="project">
+      <div class="project-top">
+        <h3>Student-RENT-Z — AI-Native Rental Marketplace</h3>
+        <div class="project-role">full-stack · FastAPI + React</div>
+      </div>
+      <p class="desc">A multi-category student rental marketplace — students rent laptops, textbooks, dorm supplies, and housing — built end to end, from the database up through an AI-powered natural-language search experience.</p>
+      <ul class="points">
+        <li>Built a RESTful FastAPI backend (RentIt API) with auth, listings, and bookings, plus an AI natural-language search endpoint (<code>/ai/search-properties</code>).</li>
+        <li>Designed CRUD API endpoints for user and rental data management, backed by a relational database (PostgreSQL/MySQL) with structured SQL access.</li>
+        <li>Implemented request validation and backend business logic for reliable API operations, tested with Postman.</li>
+        <li>Built the React (Vite) + Tailwind CSS frontend: a category-aware AI search hero with smart prompt chips, a multi-category listings grid with badges for pricing/condition/location, and item-detail modals with rental terms and deposit info.</li>
+        <li>Wired the frontend to the backend through a modular <code>src/services/api.js</code> layer using Axios, with responsive styling, category tabs, and loading/empty states.</li>
+      </ul>
+      <div class="project-tags">
+        <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span>
+        <span class="tag">MySQL</span><span class="tag">React / Vite</span><span class="tag">Tailwind CSS</span>
+        <span class="tag">Axios</span><span class="tag">REST APIs</span><span class="tag">Postman</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-top">
+        <h3>SafeWalk AI — Safe Route Recommendation</h3>
+        <div class="project-role">FastAPI + ML risk model</div>
+      </div>
+      <p class="desc">A web-facing route recommendation system: the backend serves safe-route queries by combining a pre-trained crime-risk model with graph-based routing, rather than only shortest-path.</p>
+      <ul class="points">
+        <li>Built the backend service exposing REST API endpoints to serve safe-route queries to client applications.</li>
+        <li>Designed the system architecture separating data ingestion, risk-model inference, and route-generation into independent, modular components.</li>
+        <li>Integrated a pre-trained ML risk-scoring model into the backend pipeline, wrapped behind a clean API layer for real-time inference calls.</li>
+        <li>Implemented graph-based routing with Dijkstra/A*, combining model-generated risk scores with distance metrics to compute safer paths.</li>
+        <li>Handled request validation, data access, and API testing with Postman for reliable end-to-end performance.</li>
+      </ul>
+      <div class="project-tags">
+        <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">REST APIs</span>
+        <span class="tag">NetworkX</span><span class="tag">SQL</span><span class="tag">Postman</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>Want the deeper technical walkthrough?</h2>
+    <p>Happy to talk through architecture decisions, trade-offs, or walk through the code directly.</p>
+    <div class="contact-links">
+      <a class="btn primary" href="contact.html">Get in touch</a>
+      <a class="btn" href="https://github.com/MaharnavBhuyan" target="_blank" rel="noopener">View GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
